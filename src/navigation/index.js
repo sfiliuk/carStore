@@ -1,11 +1,9 @@
 import {Navigation} from 'react-native-navigation';
-// import screenRegistration from './screenRegistration';
 
 import home from '../assets/images/home.png';
 import car from '../assets/images/car.png';
+import search from '../assets/images/search.png';
 import star from '../assets/images/star.png';
-
-// screenRegistration();
 
 export function startMainTabs() {
   Navigation.setRoot({
@@ -27,8 +25,8 @@ export function startMainTabs() {
               ],
               options: {
                 bottomTab: {
-                  text: '️Пошук',
-                  icon: home,
+                  text: 'Автосалон',
+                  icon: car,
                   selectedIconColor: '#00D78D',
                   selectedTextColor: '#00D78D',
                 },
@@ -51,7 +49,7 @@ export function startMainTabs() {
               options: {
                 bottomTab: {
                   text: 'Каталог',
-                  icon: car,
+                  icon: search,
                   selectedIconColor: '#00D78D',
                   selectedTextColor: '#00D78D',
                 },
@@ -63,8 +61,8 @@ export function startMainTabs() {
               children: [
                 {
                   component: {
-                    id: 'carStore.HomeScreen',
-                    name: 'carStore.HomeScreen',
+                    id: 'carStore.FavoritesScreen',
+                    name: 'carStore.FavoritesScreen',
                     passProps: {
                       text: 'This is tab 1',
                     },
